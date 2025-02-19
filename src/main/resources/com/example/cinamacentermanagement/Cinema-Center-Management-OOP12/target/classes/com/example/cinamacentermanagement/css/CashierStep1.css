@@ -1,0 +1,241 @@
+/* Sidebar Styles */
+.sidebar {
+    -fx-background-color: #2c2c2c;
+    -fx-padding: 20 20 20 20; /* Correct padding format */
+    -fx-spacing: 20;
+}
+
+.sidebar-logo {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #28a745; /* Green color for the logo */
+    -fx-padding: 10 0;
+    -fx-text-alignment: center;
+}
+
+.sidebar-button {
+    -fx-background-color: #444;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #555;
+}
+
+/* Main Content Styles */
+.main-content {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 20;
+    -fx-spacing: 20;
+}
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.search-section {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-spacing: 10;
+}
+
+.section-subtitle {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.styled-combo, .styled-input, .styled-button {
+    -fx-font-size: 14px;
+    -fx-pref-height: 35px;
+    -fx-pref-width: 200px; /* Set uniform width */
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+}
+
+.search-bar {
+    -fx-spacing: 15; /* Adjust spacing to give equal gaps */
+}
+
+/* Button Styling */
+.styled-button {
+    -fx-background-color: #28a745; /* Light green */
+    -fx-text-fill: white;
+}
+
+.styled-button:hover {
+    -fx-background-color: #218838;
+}
+
+/* Movie Section Styles */
+.movie-scroll {
+    -fx-padding: 10;
+    -fx-background-color: #f0f0f0;
+}
+
+.movie-grid {
+    -fx-padding: 10;
+}
+
+.movie-card {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+.movie-poster {
+    -fx-border-color: #ccc;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.movie-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.movie-description {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666;
+}
+
+.movie-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-padding: 5 10;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.movie-button:hover {
+    -fx-background-color: #218838;
+}
+
+/* Right Sidebar Styles */
+.right-sidebar {
+    -fx-background-color: #2c2c2c;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+}
+
+.right-sidebar-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.session-scroll {
+    -fx-padding: 10;
+}
+
+.session-list {
+    -fx-spacing: 10;
+}
+
+.session-card {
+    -fx-background-color: #333;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+.session-poster {
+    -fx-border-color: #ccc;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.session-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.session-genre {
+    -fx-font-size: 12px;
+    -fx-text-fill: #ccc;
+}
+/* Movie Box Styles */
+/* Hide Vertical Scrollbar */
+.movie-scroll .scroll-bar:vertical {
+    -fx-opacity: 0; /* Completely hide the vertical scrollbar */
+    -fx-pref-width: 0; /* Set the width to zero */
+}
+
+.movie-scroll .scroll-bar:vertical:hover {
+    -fx-opacity: 0; /* Ensure it doesn't appear on hover */
+}
+
+/* Hide Horizontal Scrollbar */
+.movie-scroll .scroll-bar:horizontal {
+    -fx-opacity: 0; /* Completely hide the horizontal scrollbar */
+    -fx-pref-height: 0; /* Set the height to zero */
+}
+
+.movie-scroll .scroll-bar:horizontal:hover {
+    -fx-opacity: 0;
+}
+
+/* Ensure content fits properly */
+.movie-scroll .viewport {
+    -fx-padding: 0;
+}
+
+
+.movie-card {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: lightgray;
+    -fx-border-width: 1;
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+.movie-poster {
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: lightgray;
+    -fx-border-width: 1;
+}
+
+.movie-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-text-alignment: center;
+}
+
+.movie-genre {
+    -fx-font-size: 14px;
+    -fx-text-fill: gray;
+    -fx-text-alignment: center;
+}
+
+.movie-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-padding: 5 10;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.movie-button:hover {
+    -fx-background-color: #218838;
+}
