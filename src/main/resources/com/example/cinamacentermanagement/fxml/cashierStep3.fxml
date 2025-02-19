@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.cinamacentermanagement.controllers.CashierStep3Controller"
+            stylesheets="@../css/CashierStep3.css">
+
+    <!-- A horizontal box containing seat table (left) and cart table (right). -->
+    <HBox spacing="20" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <TableView fx:id="seatTable" prefWidth="380" prefHeight="400" onMouseClicked="#onSeatSelected">
+            <columns>
+                <TableColumn fx:id="rowColumn" text="Row" />
+                <TableColumn fx:id="seatColumn" text="Seat" />
+                <TableColumn fx:id="occupiedColumn" text="Occupied" />
+            </columns>
+        </TableView>
+
+        <TableView fx:id="cartTable" prefWidth="380" prefHeight="400">
+            <columns>
+                <TableColumn fx:id="itemColumn" text="Item" />
+                <TableColumn fx:id="quantityColumn" text="Qty" />
+                <TableColumn fx:id="priceColumn" text="Price" />
+            </columns>
+        </TableView>
+    </HBox>
+
+    <!-- A horizontal box at bottom for total label and buttons. -->
+    <HBox spacing="20" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+        <Label fx:id="totalLabel" text="Subtotal: $0.00 | Total: $0.00"/>
+        <Button text="Proceed to Payment" onAction="#onProceedToPayment"/>
+        <Button text="Back" onAction="#onBackToSessionSelection"/>
+    </HBox>
+
+</AnchorPane>

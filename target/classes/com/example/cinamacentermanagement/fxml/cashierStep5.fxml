@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/javafx"
+            fx:controller="com.example.cinamacentermanagement.controllers.CashierStep5Controller"
+            prefWidth="800" prefHeight="600">
+
+    <VBox spacing="20" layoutX="20" layoutY="20" prefWidth="760" prefHeight="560">
+        
+        <!-- Ticket Details Section -->
+        <Label text="Ticket Details" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        <TableView fx:id="ticketTable" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="ticketMovieColumn" text="Movie" prefWidth="200" />
+                <TableColumn fx:id="ticketSeatColumn" text="Seat" prefWidth="100" />
+                <TableColumn fx:id="ticketPriceColumn" text="Price" prefWidth="150" />
+                <TableColumn text="Hall" prefWidth="150" />
+            </columns>
+        </TableView>
+
+        <!-- Invoice Details Section -->
+        <Label text="Invoice Details" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        <TableView fx:id="invoiceTable" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="itemColumn" text="Item" />
+                <TableColumn fx:id="quantityColumn" text="Quantity" />
+                <TableColumn fx:id="priceColumn" text="Price" />
+
+            </columns>
+        </TableView>
+
+        <!-- Total and Tax Summary -->
+        <Label fx:id="invoiceSummaryLabel" text="Subtotal: $0.00 | Tax: $0.00 | Total: $0.00" 
+               style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+        <!-- Finish Button -->
+        <HBox alignment="center" spacing="15">
+            <Button fx:id="finishButton" text="Finish" onAction="#onFinish" 
+                    style="-fx-background-color: green; -fx-text-fill: white;" />
+        </HBox>
+    </VBox>
+</AnchorPane>

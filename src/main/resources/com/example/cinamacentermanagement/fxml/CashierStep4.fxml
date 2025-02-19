@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.DatePicker?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/javafx"
+    fx:controller="com.example.cinamacentermanagement.controllers.CashierStep4Controller"
+    prefWidth="900" prefHeight="700"
+    stylesheets="@../css/cashierStep4.css">
+
+    <VBox spacing="15" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0"
+        AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0"
+        style="-fx-background-color: white; -fx-padding: 15;">
+
+        <!-- Header Section -->
+        <HBox spacing="20">
+            <VBox spacing="10">
+                <TextField fx:id="firstNameField" promptText="First Name"
+                    style="-fx-border-radius: 5; -fx-border-color: lightgray;" />
+                <TextField fx:id="lastNameField" promptText="Last Name"
+                    style="-fx-border-radius: 5; -fx-border-color: lightgray;" />
+            </VBox>
+            <VBox spacing="10">
+               <DatePicker fx:id="dateOfBirthPicker"
+                    promptText="Select Date of Birth"
+                    style="-fx-border-radius: 5; -fx-border-color: lightgray;" />
+                <TextField fx:id="emailField" promptText="Email"
+                    style="-fx-border-radius: 5; -fx-border-color: lightgray;" />
+            </VBox>
+            <Button text="Check Discount" fx:id="verifyDiscountButton"
+                onAction="#onVerifyDiscountClicked"
+                style="-fx-background-color: green; -fx-text-fill: white; -fx-border-radius: 5;" />
+        </HBox>
+
+        <!-- Store and Cart Section -->
+        <HBox spacing="20">
+            <!-- Shopping Cart Section -->
+            <VBox spacing="10"
+                style="-fx-background-color: white; -fx-border-color: lightgray; -fx-padding: 10; -fx-border-radius: 5;">
+                <Label text="Shopping Cart" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+                <TableView fx:id="cartTable" prefHeight="300">
+                    <columns>
+                        <TableColumn fx:id="itemColumn" text="Product" />
+                        <TableColumn fx:id="quantityColumn" text="Quantity" />
+                        <TableColumn fx:id="priceColumn" text="Price" />
+                    </columns>
+                </TableView>
+                <Label fx:id="totalLabel"
+                    text="Subtotal: $0.00\nDiscount: $0.00\nTax: $0.00\nTotal: $0.00"
+                    wrapText="true" 
+                    prefWidth="400"  
+                    style="-fx-font-size: 14; -fx-font-weight: bold;" />
+
+
+                <Button fx:id="approvePaymentButton"
+                    text="Approve Payment"
+                    styleClass="approve-button"
+                    onAction="#onApprovePaymentClicked"
+                    style="-fx-background-color: green; -fx-text-fill: white; -fx-border-radius: 5;" />
+            </VBox>
+
+            <!-- Product Section -->
+            <VBox spacing="10"
+                style="-fx-background-color: white; -fx-border-color: lightgray; -fx-padding: 10; -fx-border-radius: 5;">
+                <Label text="Aflix Store"
+                    style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: green;" />
+                <GridPane fx:id="productsGridPane" hgap="20" vgap="20" />
+            </VBox>
+        </HBox>
+
+    </VBox>
+</AnchorPane>

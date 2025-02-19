@@ -1,0 +1,53 @@
+
+
+.error-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-padding-bottom: 20;
+     -fx-effect: dropshadow(gaussian, black, 2, 0.3, 1, 1);
+
+
+}
+
+.login-input {
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-pref-width: 300;
+}
+
+.login-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+
+.background {
+    -fx-background-color: #2c2c2c;
+
+
+}
+
+.sidebar-logo {
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #28a745;
+    -fx-padding: 5 10;
+    -fx-text-alignment: center;
+        -fx-alignment: center;
+}
+
+.shadow {
+    -fx-effect: dropshadow(gaussian, black, 2, 0.3, 1, 1);
+}

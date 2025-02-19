@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinamacentermanagement.controllers.TicketRefundController">
+    <children>
+        <Label layoutX="50.0" layoutY="20.0" text="Movie Title" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="20.0" />
+        <ComboBox fx:id="movieTitleComboBox" layoutX="150.0" layoutY="20.0" prefHeight="26.0" prefWidth="165.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0" />
+        <Label layoutX="50.0" layoutY="60.0" text="Hall Name" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="60.0" />
+        <ComboBox fx:id="hallNameComboBox" layoutX="150.0" layoutY="60.0" prefHeight="26.0" prefWidth="166.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="60.0" />
+        <Label layoutX="50.0" layoutY="100.0" text="Session Time" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="100.0" />
+        <ComboBox fx:id="sessionTimeComboBox" layoutX="150.0" layoutY="100.0" prefHeight="26.0" prefWidth="166.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0" />
+        <Button fx:id="refundButton" layoutX="150.0" layoutY="140.0" stylesheets="@../css/Admin.css" text="Refund Ticket" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="140.0">
+         <styleClass>
+            <String fx:value="logout-button" />
+            <String fx:value="shadow" />
+         </styleClass></Button>
+    </children>
+</AnchorPane>

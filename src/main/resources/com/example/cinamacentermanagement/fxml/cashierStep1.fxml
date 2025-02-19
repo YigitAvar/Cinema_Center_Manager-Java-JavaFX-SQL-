@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="com.example.cinamacentermanagement.controllers.CashierStep1Controller"
+            stylesheets="@../css/cashierStep1.css">
+    <!-- Sidebar -->
+    <left>
+        <VBox styleClass="sidebar">
+            <!-- Logo -->
+            <Label text="Aflix" styleClass="sidebar-logo"/>
+            <Button text="Home" styleClass="sidebar-button" onAction="#goHome"/>
+            <Button text="Session / Hall" styleClass="sidebar-button" onAction="#viewTickets"/>
+            <Button text="Seat Selection" styleClass="sidebar-button" onAction="#handleSelect"/>
+            <Button text="Buy Products" styleClass="sidebar-button" onAction="#handleDispose"/>
+            <Button text="Payment Details" styleClass="sidebar-button" onAction="#handleDispose"/>
+        </VBox>
+    </left>
+
+    <!-- Main Content -->
+    <center>
+        <VBox spacing="10" styleClass="main-content">
+            <!-- Title -->
+            <Label text="Cashier Operations" styleClass="section-title"/>
+
+            <!-- Search Section -->
+            <VBox spacing="10" styleClass="search-section">
+                <Label text="Movie Search" styleClass="section-subtitle"/>
+                <HBox spacing="15" styleClass="search-bar">
+                    <ComboBox fx:id="searchTypeComboBox" promptText="Search" onAction="#handleSearchTypeChange" styleClass="styled-combo"/>
+                    <StackPane alignment="CENTER_LEFT" prefWidth="200">
+                        <TextField fx:id="searchTextField" promptText="Enter Movie Title..." styleClass="styled-input" visible="true"/>
+                        <ComboBox fx:id="genreComboBox" promptText="Select Genre" styleClass="styled-combo" visible="false" managed="false"/>
+                    </StackPane>
+                    <Button text="Search" onAction="#handleSearch" styleClass="styled-button"/>
+                </HBox>
+            </VBox>
+
+            <!-- Movies Section -->
+            <ScrollPane fitToWidth="true" fitToHeight="true" pannable="true" styleClass="movie-scroll">
+                <GridPane fx:id="moviesGridPane" hgap="20" vgap="20" styleClass="movie-grid"/>
+            </ScrollPane>
+
+        </VBox>
+    </center>
+
+    <!-- Right Sidebar -->
+    <right>
+        <VBox styleClass="right-sidebar">
+            <Label text="Closest Sessions" styleClass="right-sidebar-title"/>
+            <ScrollPane fitToWidth="true" styleClass="session-scroll">
+                <VBox spacing="10" styleClass="session-list">
+                    <!-- Example Session Card -->
+                    <VBox styleClass="session-card">
+                        <ImageView fitWidth="100" fitHeight="100" styleClass="session-poster"/>
+                        <Label text="Movie Title" styleClass="session-title"/>
+                        <Label text="Genre: Genre Name" styleClass="session-genre"/>
+                    </VBox>
+                </VBox>
+            </ScrollPane>
+        </VBox>
+    </right>
+</BorderPane>

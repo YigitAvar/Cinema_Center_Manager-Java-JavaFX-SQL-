@@ -1,0 +1,50 @@
+/* cashier_step3.css */
+
+/* Style the background of the AnchorPane if desired */
+.root {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Tables */
+#seatTable, #cartTable {
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+    -fx-background-color: #ffffff;
+    -fx-table-cell-border-color: #dddddd;
+    -fx-table-header-border-color: #cccccc;
+}
+
+/* Table columns can get a small padding or alignment tweak if desired */
+.table-column .label {
+    -fx-padding: 8;
+}
+
+/* Label styling */
+#totalLabel {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #5DADE2;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+
+/* Add hover effect for buttons (optional) */
+.button:hover {
+    -fx-background-color: #5499C7;
+}
+
+/* 
+   If you want to highlight the selected table row with a custom color:
+   This doesn't override the dynamic code-based color for occupied seats, 
+   but affects the "selected" highlight color for the user. 
+*/
+.table-row-cell:focused:selected {
+    -fx-background-color: #ffe083;  /* Light yellow highlight */
+}

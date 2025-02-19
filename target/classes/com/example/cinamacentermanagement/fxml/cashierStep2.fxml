@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="com.example.cinamacentermanagement.controllers.CashierStep2Controller"
+            stylesheets="@../css/cashierStep2.css">
+
+    <!-- Top Section: Title -->
+    <top>
+        <HBox alignment="CENTER" styleClass="header">
+            <Label text="Select Day, Session, and Hall" styleClass="header-title" />
+        </HBox>
+    </top>
+
+    <!-- Center Section: Table and Options -->
+    <center>
+        <VBox spacing="10" styleClass="main-content">
+            <!-- Movie Selection -->
+            <HBox spacing="10" alignment="CENTER_LEFT" styleClass="movie-selection">
+                <Label text="Select Movie:" styleClass="label" />
+                <ComboBox fx:id="movieComboBox" prefWidth="200" styleClass="styled-combo" onAction="#onMovieSelected"/>
+            </HBox>
+
+            <!-- Sessions Table -->
+            <TableView fx:id="sessionsTable" styleClass="sessions-table" onMouseClicked="#onSessionSelected">
+                <columns>
+                    <TableColumn fx:id="dayColumn" text="Day" prefWidth="150" />
+                    <TableColumn fx:id="sessionTimeColumn" text="Session Time" prefWidth="150" />
+                    <TableColumn fx:id="hallColumn" text="Hall" prefWidth="150" />
+                    <TableColumn fx:id="vacantSeatsColumn" text="Vacant Seats" prefWidth="150" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- Bottom Section: Buttons -->
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT" styleClass="button-container">
+            <Button fx:id="selectButton" text="Select" styleClass="styled-button" onAction="#onSelectButtonClicked"/>
+            <Button fx:id="backButton" text="Back to Search" styleClass="styled-button" />
+        </HBox>
+    </bottom>
+</BorderPane>

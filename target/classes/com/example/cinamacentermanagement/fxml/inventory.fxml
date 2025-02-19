@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="627.0" prefWidth="974.0" stylesheets="@../css/Manager.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinamacentermanagement.controllers.InventoryController">
+    <children>
+        <HBox spacing="10" styleClass="main-content" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="viewInventoryButton" styleClass="logout-button" text="View Items" />
+                <Button fx:id="updateInventoryButton" styleClass="logout-button" text="Update Inventory Stock" />
+                <Button fx:id="updatePriceButton" styleClass="logout-button" text="Update Product Prices" />
+            </children>
+        </HBox>
+        <VBox layoutX="14.0" layoutY="62.0" prefHeight="521.0" prefWidth="612.0">
+            <children>
+                <TableView fx:id="inventoryTable" prefHeight="523.0" prefWidth="612.0">
+                    <columns>
+                        <TableColumn fx:id="productIdColumn" prefWidth="71.0" text="Product ID" />
+                        <TableColumn fx:id="nameColumn" prefWidth="92.0" text="Name" />
+                        <TableColumn fx:id="priceColumn" prefWidth="40.0" text="Price" />
+                        <TableColumn fx:id="categoryColumn" prefWidth="64.0" text="Category" />
+                        <TableColumn fx:id="descriptionColumn" prefWidth="200.0" text="Description" />
+                        <TableColumn fx:id="stockQuantityColumn" prefWidth="92.0" text="Stock Quantity" />
+                        <TableColumn fx:id="taxColumn" prefWidth="52.0" text="Tax" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+        <ImageView fx:id="productImageView" fitHeight="447.0" fitWidth="283.0" layoutX="653.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</AnchorPane>

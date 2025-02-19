@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="686.0" prefWidth="686.0" spacing="10" style="-fx-background-color: #f0f0f0;" stylesheets="@../css/Manager.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinamacentermanagement.controllers.RevenueController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+    <children>
+        <VBox alignment="CENTER" spacing="10">
+            <Label style="-fx-font-size: 40px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Revenue and Taxes" />
+            <HBox alignment="CENTER" spacing="10">
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Total Revenue :" />
+                <Label fx:id="totalRevenueLabel" style="-fx-font-size: 18px;" text=" ₺" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="10">
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Total Tax :" />
+                <Label fx:id="totalTaxLabel" style="-fx-font-size: 18px;" text=" ₺" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="10">
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Date :" />
+                <Label fx:id="dateLabel" style="-fx-font-size: 18px;" text="-" />
+            </HBox>
+        </VBox>
+        <HBox spacing="10">
+            <Button fx:id="viewDiscountsButton" onAction="#viewDiscounts" styleClass="logout-button" text="View Discounts" />
+            <Button fx:id="updateDiscountsButton" onAction="#updateDiscounts" styleClass="logout-button" text="Update Discounts" />
+        </HBox>
+        <TableView fx:id="ageBasedDiscountTable" prefHeight="394.0" prefWidth="1200.0">
+            <columns>
+                <TableColumn fx:id="discountIdColumn" prefWidth="280.0" text="Discount ID" style="-fx-alignment: CENTER;" />
+                <TableColumn fx:id="ageMinColumn" prefWidth="280.0" text="Age Min" style="-fx-alignment: CENTER;" />
+                <TableColumn fx:id="ageMaxColumn" prefWidth="280.0" text="Age Max" style="-fx-alignment: CENTER;" />
+                <TableColumn fx:id="discountPercentageColumn" prefWidth="280" text="Discount Percentage" style="-fx-alignment: CENTER;" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>

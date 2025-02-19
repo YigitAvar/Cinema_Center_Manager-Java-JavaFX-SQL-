@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/Admin.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinamacentermanagement.controllers.CreateScheduleController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="240.0" styleClass="middle-content-sidebar" stylesheets="@../css/Admin.css" BorderPane.alignment="CENTER">
+         <children>
+              <Label prefHeight="20.0" prefWidth="103.0" styleClass="side-bar-bold" text="Select Movie:" />
+              <Label prefHeight="20.0" prefWidth="106.0" styleClass="side-bar-bold" text="Select Hall:" />
+              <Label prefHeight="20.0" prefWidth="90.0" styleClass="side-bar-bold" text="Date:" />
+              <Label prefHeight="20.0" prefWidth="88.0" styleClass="side-bar-bold" text="Time:" />
+              <Button fx:id="addScheduleButton" text="Add Schedule">
+               <styleClass>
+                  <String fx:value="logout-button" />
+                  <String fx:value="sidebar-button" />
+               </styleClass>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@../css/Admin.css" BorderPane.alignment="CENTER">
+         <children>
+              <ComboBox fx:id="movieComboBox" prefHeight="27.0" prefWidth="200.0" />
+              <ComboBox fx:id="hallComboBox" prefHeight="26.0" prefWidth="200.0" />
+            <HBox prefHeight="58.0" prefWidth="414.0" stylesheets="@../css/Admin.css">
+               <children>
+                  <VBox prefHeight="57.0" prefWidth="100.0">
+                     <children>
+                          <Label text="Year" />
+                          <ComboBox fx:id="yearComboBox" prefWidth="80.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="49.0" prefWidth="100.0">
+                     <children>
+                          <Label text="Month" />
+                          <ComboBox fx:id="monthComboBox" prefWidth="60.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="71.0" prefWidth="100.0">
+                     <children>
+                          <Label text="Day" />
+                          <ComboBox fx:id="dayComboBox" prefWidth="60.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="59.0" prefWidth="414.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                          <Label text="Hour" />
+                          <ComboBox fx:id="hourComboBox" prefWidth="60.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="81.0" prefWidth="100.0">
+                     <children>
+                          <Label text="Minute" />
+                          <ComboBox fx:id="minuteComboBox" prefWidth="60.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                          <Label text="Second" />
+                          <ComboBox fx:id="secondComboBox" prefWidth="60.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <styleClass>
+            <String fx:value="middle-content" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </VBox>
+   </center>
+</BorderPane>

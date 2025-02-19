@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.cinamacentermanagement.controllers.MovieDetailsModalController"
+           styleClass="modal-container"
+           fx:id="modalContainer"
+           stylesheets="@../css/modal.css"
+>
+    <!-- Modal Content -->
+    <VBox spacing="20" styleClass="modal-content">
+        <!-- Header -->
+        <HBox alignment="CENTER_RIGHT">
+            <Button text="X" styleClass="modal-close-button" onAction="#handleClose"/>
+        </HBox>
+
+        <!-- Movie Poster -->
+        <ImageView fx:id="moviePoster" fitWidth="300" preserveRatio="true" styleClass="modal-poster"/>
+
+        <!-- Movie Details -->
+        <VBox spacing="10" alignment="CENTER">
+            <Label fx:id="movieTitle" styleClass="modal-title"/>
+            <Label fx:id="movieGenre" styleClass="modal-genre"/>
+            <TextArea fx:id="movieSummary" editable="false" wrapText="true" styleClass="modal-summary" prefWidth="300" prefHeight="200"/>
+        </VBox>
+
+        <!-- Approve Button -->
+        <Button text="Approve" fx:id="approveButton" onAction="#handleApprove" styleClass="modal-approve-button"/>
+    </VBox>
+</StackPane>

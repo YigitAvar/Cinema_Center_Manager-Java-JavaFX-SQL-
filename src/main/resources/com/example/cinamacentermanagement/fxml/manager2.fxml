@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="1200.0" stylesheets="@../css/Manager.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinamacentermanagement.controllers.ManagerOperationsController2">
+    <top>
+        <HBox prefHeight="29.0" prefWidth="800.0" styleClass="top-bar" stylesheets="@../css/Manager.css">
+            <children>
+                <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="224.0" styleClass="top-bar-title" text="Manager Menu" />
+                <HBox prefHeight="24.0" prefWidth="403.0" styleClass="top-bar-title" stylesheets="@../css/Manager.css" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="loggedInAsLabel" prefHeight="18.0" prefWidth="472.0" styleClass="welcome-text" stylesheets="@../css/Manager.css" />
+                    </children>
+                </HBox>
+                <Button fx:id="logoutButton" onAction="#handleLogout" styleClass="logout-button" text="Log Out" />
+            </children>
+            <padding>
+                <Insets bottom="5" left="10" right="10" top="5" />
+            </padding>
+        </HBox>
+    </top>
+    <left>
+        <VBox alignment="TOP_CENTER" spacing="10" styleClass="sidebar" stylesheets="@../css/Manager.css">
+            <padding>
+                <Insets top="10" />
+            </padding>
+            <children>
+                <Label styleClass="sidebar-logo" text="Aflix" />
+                <Button fx:id="InventoryButton" prefWidth="180.0" styleClass="sidebar-button" text="Inventory" />
+                <Button fx:id="PersonnelButton" prefWidth="180.0" styleClass="sidebar-button" text="Personnel" />
+                <Button fx:id="PricingButton" prefWidth="180.0" styleClass="sidebar-button" text="Pricing" />
+                <Button fx:id="RevenueButton" prefWidth="180.0" styleClass="sidebar-button" text="Revenue" />
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox fx:id="menuArea" prefHeight="363.0" prefWidth="600.0">
+         <children>
+            <VBox styleClass="logout-button" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="528.0" prefWidth="970.0" styleClass="sidebar" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label styleClass="top-bar-title" text="Manager Info Page:" textFill="WHITE" />
+                              <HBox prefHeight="329.0" prefWidth="116.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="329.0" prefWidth="184.0" styleClass="sidebar" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label styleClass="middle-title" text="Inventory:" />
+                                          <Label styleClass="middle-title" text="Personnel:" />
+                                          <Label styleClass="middle-title" text="Pricing:" />
+                                          <Label styleClass="middle-title" text="Revenue:" />
+                                          <Label styleClass="middle-title" text="Log Out:" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" styleClass="sidebar">
+                                       <children>
+                                          <Label styleClass="middle-title" text="Enables the manager to view items, update inventory stock and product prices." />
+                                          <Label styleClass="middle-title" text="Enables the manager to view all personnels, hire and fire personnels." />
+                                          <Label styleClass="middle-title" text="Enables the manager to view movies and update ticket prices." />
+                                          <Label styleClass="middle-title" text="Enables the manager to view the total revenue - tax, view and update age based discounts." />
+                                          <Label styleClass="middle-title" text="Enables the manager to log out of the system." />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></VBox>
+    </center>
+</BorderPane>
