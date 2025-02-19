@@ -1,0 +1,75 @@
+.modal-container {
+    -fx-padding: 20;
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-max-width: 90%; /* Modal won't exceed 90% of the window width */
+    -fx-max-height: 90%; /* Modal won't exceed 90% of the window height */
+}
+
+.modal-content {
+    -fx-alignment: center;
+    -fx-padding: 20;
+    -fx-background-color: white;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-min-width: 300px; /* Minimum width */
+    -fx-max-width: 600px; /* Maximum width */
+    -fx-min-height: 300px; /* Minimum height */
+    -fx-max-height: 500px; /* Maximum height */
+}
+
+.modal-close-button {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.modal-close-button:hover {
+    -fx-background-color: darkred;
+}
+
+.modal-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.modal-genre {
+    -fx-font-size: 16px;
+    -fx-text-fill: gray;
+}
+
+.modal-summary {
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-max-height: 200px; /* Set max height for summary text */
+    -fx-overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.modal-poster {
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: lightgray;
+    -fx-border-width: 2;
+    -fx-max-width: 85%; /* Responsive poster size */
+    -fx-max-height: 300px;
+}
+
+.modal-approve-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+   -fx-pref-width: 150;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center;
+}
+
+.modal-approve-button:hover {
+    -fx-background-color: #218838;
+}
